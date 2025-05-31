@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterco Home</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Right Utility Navigation -->
+  <nav class="utility-nav">
+    <ul>
+      <li><a href="#">Join Us</a></li>
+      <li><a href="#">Sign In</a></li>
+      <li class="language-select">
+        <select aria-label="Language selector">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </li>
+      <li><button id="searchToggle" aria-label="Search">🔍</button></li>
+      <li><a href="#" class="tour-icon" aria-label="Interactive tour">🕶️</a></li>
+    </ul>
+  </nav>
+  <div id="searchBar" class="search-bar hidden">
+    <input type="text" placeholder="Search...">
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop>
+      <source src="video-placeholder.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <h1>Built for every species. Guided by nature. Proven by science.</h1>
+      <p class="subline">Advancing veterinary care with innovative solutions.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn">Explore Innovation</a>
+        <a href="#" class="btn secondary">Enter V-Gallery</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Sidebar -->
+  <aside id="filterSidebar" class="filter-sidebar collapsed">
+    <button id="filterToggle" aria-label="Toggle filters">☰ Filters</button>
+    <div class="filters">
+      <button class="filter-btn">By Functional Domain</button>
+      <button class="filter-btn">By Target Species</button>
+      <button class="filter-btn">By Form</button>
+      <button class="filter-btn">By Innovation Line</button>
+    </div>
+  </aside>
+
+  <!-- Product Sections -->
+  <main>
+    <section class="product-module">
+      <img src="placeholder1.jpg" alt="Product 1">
+      <div class="module-text">
+        <h2>Product Module One</h2>
+        <p>Brief description about this product or innovation.</p>
+      </div>
+    </section>
+    <section class="product-module">
+      <img src="placeholder2.jpg" alt="Product 2">
+      <div class="module-text">
+        <h2>Product Module Two</h2>
+        <p>Brief description about this product or innovation.</p>
+      </div>
+    </section>
+    <section class="product-module">
+      <img src="placeholder3.jpg" alt="Product 3">
+      <div class="module-text">
+        <h2>Product Module Three</h2>
+        <p>Brief description about this product or innovation.</p>
+      </div>
+    </section>
+
+    <!-- Editorial Innovation Section -->
+    <section class="editorial">
+      <h2>Editorial Innovation</h2>
+      <div class="tiles">
+        <article class="tile">
+          <img src="catalog-placeholder.jpg" alt="Catalog Cover">
+          <h3>V-Gallery</h3>
+        </article>
+        <article class="tile">
+          <img src="innovation-placeholder.jpg" alt="Innovation Highlights">
+          <h3>V-247</h3>
+        </article>
+        <article class="tile">
+          <img src="video-placeholder.jpg" alt="Showroom Video">
+          <h3>V-Showroom</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h4>About Veterco</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Partner With Us</a></li>
+          <li><a href="#">Explore Our World</a></li>
+          <li><a href="#">Innovation Filters</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>V-Affiliates</h4>
+        <ul>
+          <li><a href="#">Corporate & Legal</a></li>
+          <li><a href="#">Join Our Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="social">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Veterco. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
