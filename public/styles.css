@@ -1,0 +1,244 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1a1e29;
+  background-color: #f5f7f9;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #0e172e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0e172e;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.btn.secondary {
+  background-color: #4dd0b5;
+  color: #0e172e;
+}
+.btn:hover {
+  background-color: #1d263d;
+}
+
+/* Utility Navigation */
+.utility-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 1000;
+}
+.utility-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+.utility-nav li {
+  display: flex;
+  align-items: center;
+}
+.language-select select {
+  background: transparent;
+  border: 1px solid #0e172e;
+  padding: 0.25rem;
+}
+
+/* Search Bar */
+.search-bar {
+  position: fixed;
+  top: 3.5rem;
+  right: 1rem;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: none;
+}
+.search-bar input {
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+}
+.search-bar.show {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+}
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.subline {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(14, 23, 46, 0.9);
+  color: #fff;
+  padding: 1rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.filter-sidebar.collapsed {
+  transform: translate(-100%, -50%);
+}
+.filter-sidebar button {
+  display: block;
+  margin: 0.5rem 0;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.filter-sidebar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Product Modules */
+.product-module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(50px);
+}
+.product-module.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.product-module img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Editorial Section */
+.editorial {
+  padding: 2rem;
+  background: #e8eef1;
+  text-align: center;
+}
+.editorial .tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.editorial .tile {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+.editorial .tile:hover {
+  transform: translateY(-5px);
+}
+.editorial .tile img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #0e172e;
+  color: #fff;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.footer-top h4 {
+  margin-top: 0;
+}
+.footer-top ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-top a {
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.footer-top a:hover {
+  opacity: 1;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  background: #0a1425;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .filter-sidebar {
+    top: auto;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 50%;
+    border-radius: 8px 8px 0 0;
+  }
+  .filter-sidebar.collapsed {
+    transform: translate(-50%, 100%);
+  }
+}
