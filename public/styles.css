@@ -114,10 +114,46 @@ a {
   gap: 1rem;
 }
 
+/* Main Sidebar */
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 900;
+}
+.main-sidebar .sidebar-section {
+  margin-bottom: 1.5rem;
+}
+.main-sidebar h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.main-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: #fff;
+  border: 1px solid #0e172e;
+  padding: 0.5rem 0.75rem;
+  z-index: 1001;
+}
+
 /* Filter Sidebar */
 .filter-sidebar {
   position: fixed;
-  left: 0;
+  left: 240px;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(14, 23, 46, 0.9);
@@ -200,25 +236,25 @@ footer {
   background: #0e172e;
   color: #fff;
 }
-.footer-top {
+.footer-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
-.footer-top h4 {
+.footer-row h4 {
   margin-top: 0;
 }
-.footer-top ul {
+.footer-row ul {
   list-style: none;
   padding: 0;
 }
-.footer-top a {
+.footer-row a {
   color: #fff;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
-.footer-top a:hover {
+.footer-row a:hover {
   opacity: 1;
 }
 .footer-bottom {
@@ -230,6 +266,19 @@ footer {
 @media (max-width: 768px) {
   .cta-buttons {
     flex-direction: column;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .main-sidebar {
+    width: 100%;
+    height: auto;
+    transform: translateY(-100%);
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .main-sidebar.open {
+    transform: translateY(0);
   }
   .filter-sidebar {
     top: auto;
