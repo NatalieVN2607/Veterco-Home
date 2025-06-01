@@ -32,3 +32,11 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.3 });
 modules.forEach(module => observer.observe(module));
+
+// Toggle main sidebar on mobile
+const menuToggle = document.getElementById('menuToggle');
+const mainSidebar = document.getElementById('mainSidebar');
+
+menuToggle.addEventListener('click', () => {
+  mainSidebar.classList.toggle('open');
+});
