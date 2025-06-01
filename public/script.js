@@ -12,6 +12,13 @@ filterToggle.addEventListener('click', () => {
   filterSidebar.classList.toggle('collapsed');
 });
 
+// Toggle main sidebar on mobile
+const menuToggle = document.getElementById('menuToggle');
+const mainSidebar = document.getElementById('mainSidebar');
+menuToggle.addEventListener('click', () => {
+  mainSidebar.classList.toggle('open');
+});
+
 // Show sidebar after scrolling past hero
 window.addEventListener('scroll', () => {
   const heroHeight = document.querySelector('.hero').offsetHeight;
