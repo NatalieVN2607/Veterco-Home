@@ -12,6 +12,19 @@ filterToggle.addEventListener('click', () => {
   filterSidebar.classList.toggle('collapsed');
 });
 
+// Toggle main navigation sidebar
+const menuToggle = document.getElementById('menuToggle');
+const mainSidebar = document.getElementById('mainSidebar');
+menuToggle.addEventListener('click', () => {
+  mainSidebar.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (mainSidebar.classList.contains('open') && !mainSidebar.contains(e.target) && e.target !== menuToggle) {
+    mainSidebar.classList.remove('open');
+  }
+});
+
 // Show sidebar after scrolling past hero
 window.addEventListener('scroll', () => {
   const heroHeight = document.querySelector('.hero').offsetHeight;
